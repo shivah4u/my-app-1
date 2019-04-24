@@ -1,8 +1,8 @@
 node{
    def tomcatIp = '18.222.253.141'
    def tomcatUser = 'ec2-user'
-   def stopTomcat = "ssh ${tomcatUser}@${tomcatIp} /opt/tomcat8/bin/shutdown.sh"
-   def startTomcat = "ssh ${tomcatUser}@${tomcatIp} /opt/tomcat8/bin/startup.sh"
+   def stopTomcat = "ssh $ec2-user@$3.14.81.235:/opt/tomcat8/bin/shutdown.sh"
+   def startTomcat = "ssh $ec2-user}@$3.14.81.235:/opt/tomcat8/bin/startup.sh"
    def copyWar = "scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@3.14.81.235:/opt/apache-tomcat-8.5.40/webapps/"
    stage('SCM Checkout'){
         git branch: 'master', 
